@@ -3,8 +3,11 @@ let nodes2 = new Map();
 let voice;
 let voices;
 let zoom = 0;
+let scrollDelta = 0;
+let pscrollWheel = 0;
 let center;
 let data
+let time = 0;
 function setup() {
   
   let canvas = createCanvas(windowWidth, windowHeight);
@@ -86,6 +89,8 @@ for (let i = 0; i < data.length; i++){
 
 function draw() { 
   background(255);
+
+  
   //dot.render();
   
     // Save the current state (translation/rotation/etc)
@@ -111,11 +116,11 @@ function draw() {
   }
   //console.log(nodes2)
   for (let i = 0; i < data.length; i++){
-    nodes2.get(i).render(center, zoom);
+    nodes2.get(i).render(center, zoom, zoom);
     
   }
   for (let i = 1; i < 8; i++){
-    nodes.get(i).render(center, zoom);
+    nodes.get(i).render(center, zoom, zoom);
     
   }
 
@@ -136,13 +141,32 @@ function rotatePoint(center, pos, angle) {
       ny = (cos * (y - cy)) - (sin * (x - cx)) + cy;
   return createVector(nx, ny);
 }
+function zoomPoint(center, pos, zoom){
+  center.x = center.x*zoom;
+  center.y = center.y*zoom;
+  let offsetx = pos.x - center.x;
+  let offsety = pos.y - center.y;
+  offsetx = offsetx * zoom;
+  offsety = offsety * zoom;
+  let nx = center.x+offsetx;
+  let ny = center.y+offsety;
+  return createVector(nx, ny);
+
+}
 function mouseClicked(){
   voice.speak('turn left here.')
 
 }
 function mouseWheel(event) { 
-    center = createVector(mouseX, mouseY);
+  
+  
+  time = millis();
   // Change the red value according 
   console.log(zoom);
-zoom += event.delta/100; 
+  center = createVector(mouseX, mouseY);
+  
+  zoom += event.delta/((30-zoom)*100); 
+  zoom = constrain(zoom, 1, 30);
+  
+
 } 

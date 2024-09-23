@@ -6,8 +6,10 @@ class Node {
       this.name = name
 
     }
-    render(center, angle){
-  let pos = rotatePoint(center, this.pos, angle);
+    render(center, angle, zoom){
+  let pos = zoomPoint(center, this.pos, zoom);
+  point(center.x, center.y);
+  //let pos = rotatePoint(center, this.pos, angle);
   strokeWeight(2)
   fill('red');
   
@@ -43,4 +45,15 @@ class Node {
         nx = (cos * (x - cx)) + (sin * (y - cy)) + cx,
         ny = (cos * (y - cy)) - (sin * (x - cx)) + cy;
     return createVector(nx, ny);
+  
+  }
+  function zoomPoint(center, pos, zoom){
+    let offsetx = pos.x - center.x;
+    let offsety = pos.y - center.y;
+    offsetx = offsetx * zoom;
+    offsety = offsety * zoom;
+    let nx = center.x+offsetx;
+    let ny = center.y+offsety;
+    return createVector(nx, ny);
+  
   }
