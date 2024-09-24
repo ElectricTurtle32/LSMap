@@ -1,7 +1,7 @@
 
 let voice;
 let voices;
-let zoom = 0;
+let zoom = 1;
 let scrollDelta = 0;
 let pscrollWheel = 0;
 let center;
@@ -11,7 +11,7 @@ let jsonmap;
 let graph;
 function preload() {
   // Load the JSON file and then call the loadData() function below
-  jsonmap = loadJSON('map.json');
+  jsonmap = loadJSON('mapcool.json');
 
 }
 function setup() {
@@ -51,7 +51,10 @@ function draw() {
 
   let path = graph.solve('1', '4');
   text(path, 0, 50);
-  
+
+  for (let i = 1; i < 5; i++){
+  graph.render(i.toString(), zoom, center);
+  }
   // for (let i = 0; i < path.length-1; i++){
   //   p1 = rotatePoint(center, nodes.get(path[i]).pos, zoom);
   //   p2 = rotatePoint(center, nodes.get(path[i+1]).pos, zoom);
@@ -77,9 +80,7 @@ function mouseClicked(){
 function mouseWheel(event) { 
   
   
-  time = millis();
-  // Change the red value according 
-  console.log(zoom);
+
   center = createVector(mouseX, mouseY);
   
   zoom += event.delta/((30-zoom)*100); 

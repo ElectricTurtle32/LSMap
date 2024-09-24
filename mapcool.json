@@ -1,0 +1,58 @@
+{
+  "1": {
+    "x": 54,
+    "y": 31,
+    "connections": [
+      {
+        "name": "2",
+        "distance": 5
+      },
+      {
+        "name": "3",
+        "distance": 5
+      }
+    ]
+  },
+  "2": {
+    "x": 73,
+    "y": 13,
+    "connections": [
+      {
+        "name": "1",
+        "distance": 5
+      },
+      {
+        "name": "4",
+        "distance": 5
+      }
+    ]
+  },
+  "3": {
+    "x": 61,
+    "y": 31,
+    "connections": [
+      {
+        "name": "1",
+        "distance": 5
+      },
+      {
+        "name": "4",
+        "distance": 5
+      }
+    ]
+  },
+  "4": {
+    "x": 65,
+    "y": 34,
+    "connections": [
+      {
+        "name": "3",
+        "distance": 5
+      },
+      {
+        "name": "2",
+        "distance": 5
+      }
+    ]
+  }
+}
