@@ -1,7 +1,7 @@
 
 class Graph {
-    constructor(graph) {
-        this.graph = graph;
+    constructor(json) {
+    this.graph = json;
 
 
     }
@@ -18,10 +18,11 @@ class Graph {
                 visted.push(currentNode[1]);
                 let distance = currentNode[0];
                 source.set(currentNode[1], currentNode[2]);
-                let connectedNodes = this.graph.get(currentNode[1])
+                alert(JSON.stringify(this.graph[currentNode[1]]))
+                let connectedNodes = this.graph[currentNode[1]].connections;
               
-                for (let i = 0; i < connectedNodes.length-1; i +=2){
-                    queue.push([distance+connectedNodes[i+1], connectedNodes[i], currentNode[1]]);
+                for (let i = 0; i < connectedNodes.length; i++){
+                    queue.push([distance+connectedNodes[i].distance, connectedNodes[i].name, currentNode[1]]);
                 }
             }
         }
