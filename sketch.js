@@ -1,5 +1,6 @@
 let nodes = new Map();
 let nodes2 = new Map();
+let nodes3 = new Map();
 let voice;
 let voices;
 let zoom = 0;
@@ -8,6 +9,11 @@ let pscrollWheel = 0;
 let center;
 let data
 let time = 0;
+let jsonmap;
+function preload() {
+  // Load the JSON file and then call the loadData() function below
+  jsonmap = loadJSON('map.json', loadData);
+}
 function setup() {
   
   let canvas = createCanvas(windowWidth, windowHeight);
@@ -77,6 +83,9 @@ data = [
   [2105, 78, 58]
 ];
 
+for (let i = 1; i < 8; i++){
+  nodes.set(i, new Node(createVector(round(random(50, 400)), round(random(50, 800))), 'Room ' + i));
+}
 for (let i = 1; i < 8; i++){
   nodes.set(i, new Node(createVector(round(random(50, 400)), round(random(50, 800))), 'Room ' + i));
 }
