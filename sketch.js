@@ -11,7 +11,7 @@ let jsonmap;
 let graph;
 function preload() {
   // Load the JSON file and then call the loadData() function below
-  jsonmap = loadJSON('mapcool.json');
+  jsonmap = loadJSON('school.json');
 
 }
 function setup() {
@@ -49,11 +49,15 @@ function draw() {
   //   text(JSON.stringify(foo.name), i*10, i*10);
   // }
 
-  let path = graph.solve('1', '4');
-  text(path, 0, 50);
-
-  for (let i = 1; i < 5; i++){
-  graph.render(i.toString(), zoom, center);
+  let path = graph.solve('2223', '2237');
+  text(path, 50, 50)
+  for (let i = 0; i < path.length-1; i++){
+    text(Object.keys(jsonmap)[i].toString(), 50, 50*i);
+    text(Object.keys(jsonmap)[i+1].toString(), 100, 50*i);
+    graph.drawLine(path[i].toString(), path[i+1].toString(), zoom, center);
+  }
+  for (let i = 1; i < Object.keys(jsonmap).length; i++){
+    graph.drawNode(Object.keys(jsonmap)[i].toString(), zoom, center);
   }
   // for (let i = 0; i < path.length-1; i++){
   //   p1 = rotatePoint(center, nodes.get(path[i]).pos, zoom);
@@ -83,7 +87,7 @@ function mouseWheel(event) {
 
   center = createVector(mouseX, mouseY);
   
-  zoom += event.delta/((30-zoom)*100); 
+  zoom += event.delta/((30-zoom)*10); 
   zoom = constrain(zoom, 1, 30);
   
 
