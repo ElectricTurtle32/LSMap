@@ -1,3 +1,7 @@
+*{
+
+  font-family: "Inter", Times, serif;
+}
 html, body {
   margin: 0;
   padding: 0;
@@ -16,18 +20,62 @@ canvas {
   z-index: -1;
 }
 #search{
+  flex: 1;
+ font-size: large;
+  border: none;
+  outline: none;
+  margin: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+  
+}
+#searchList{
+  list-style-type: none;
+  font-size: 18px;
+  flex-grow: 1;
+  padding: 0;
+  margin-top: 15px;
   
   
-  width: 50%;
-  height: 30px;
-  line-height: 30px;
+}
+
+#searchDiv{
+ 
+
+  width: 25%;
+  height: auto;
   margin: auto;
   padding: auto;
-  padding-left: 20px;
   margin-top: 10px;
   background-color: white;
-  box-shadow: 0px 2px 4px lightslategray;
-  border-radius: 30px;
+  box-shadow: 0px 2px 4px lightslategray; 
+  border-radius: 15px;
+  
+  
+  display: none;
+}
+
+#searchBar{
+  
+  width: 25%;
+  height: 40px;
+  margin: auto;
+  padding: auto;
+  margin-top: 10px;
+  background-color: white;
+  box-shadow: 0px 2px 4px lightslategray; 
+  border-radius: 40px;
+  
+  display: flex;
+
+
 
   
+}
+#searchList li {
+  padding-left: 15px;
+}
+
+#searchDiv #searchList li:hover {
+  background-color: #eee !important; /* Use !important to override other styles */
 }

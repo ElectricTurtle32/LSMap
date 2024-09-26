@@ -1,0 +1,412 @@
+{
+  "2202": {
+    "x": 63,
+    "y": 184,
+    "connections": []
+  },
+  "2205": {
+    "x": 79,
+    "y": 206,
+    "connections": [
+      {
+        "name": "H2234",
+        "distance": 2
+      }
+    ]
+  },
+  "2206": {
+    "x": 84,
+    "y": 184,
+    "connections": []
+  },
+  "2222": {
+    "x": 36,
+    "y": 173,
+    "connections": [
+      {
+        "name": "H2222",
+        "distance": 2
+      }
+    ]
+  },
+  "2223": {
+    "x": 36,
+    "y": 179,
+    "connections": [
+      {
+        "name": "H2223",
+        "distance": 2
+      }
+    ]
+  },
+  "2226": {
+    "x": 53,
+    "y": 189,
+    "connections": [
+      {
+        "name": "H2226",
+        "distance": 3
+      }
+    ]
+  },
+  "2227": {
+    "x": 36,
+    "y": 192,
+    "connections": [
+      {
+        "name": "H2227",
+        "distance": 2
+      }
+    ]
+  },
+  "2231": {
+    "x": 29,
+    "y": 210,
+    "connections": [
+      {
+        "name": "H2231",
+        "distance": 2
+      }
+    ]
+  },
+  "2232": {
+    "x": 50,
+    "y": 210,
+    "connections": [
+      {
+        "name": "H2232",
+        "distance": 2
+      }
+    ]
+  },
+  "2234": {
+    "x": 79,
+    "y": 210,
+    "connections": [
+      {
+        "name": "H2234",
+        "distance": 2
+      }
+    ]
+  },
+  "2237": {
+    "x": 94,
+    "y": 210,
+    "connections": [
+      {
+        "name": "H2237",
+        "distance": 2
+      }
+    ]
+  },
+  "EStairsTop": {
+    "x": 104,
+    "y": 208,
+    "connections": [
+      {
+        "name": "C24",
+        "distance": 9
+      }
+    ]
+  },
+  "H2234": {
+    "x": 79,
+    "y": 208,
+    "connections": [
+      {
+        "name": "2234",
+        "distance": 2
+      },
+      {
+        "name": "H2237",
+        "distance": 15
+      },
+      {
+        "name": "2205",
+        "distance": 2
+      },
+      {
+        "name": "C21",
+        "distance": 11
+      }
+    ]
+  },
+  "EStairsTop2": {
+    "x": 104,
+    "y": 186,
+    "connections": [
+      {
+        "name": "C23",
+        "distance": 9
+      }
+    ]
+  },
+  "H2227": {
+    "x": 38,
+    "y": 192,
+    "connections": [
+      {
+        "name": "2227",
+        "distance": 2
+      },
+      {
+        "name": "C20",
+        "distance": 16
+      },
+      {
+        "name": "H2223",
+        "distance": 13
+      }
+    ]
+  },
+  "H2223": {
+    "x": 38,
+    "y": 179,
+    "connections": [
+      {
+        "name": "2223",
+        "distance": 2
+      },
+      {
+        "name": "H2227",
+        "distance": 13
+      },
+      {
+        "name": "H2222",
+        "distance": 6
+      }
+    ]
+  },
+  "C20": {
+    "x": 38,
+    "y": 208,
+    "connections": [
+      {
+        "name": "H2232",
+        "distance": 12
+      },
+      {
+        "name": "H2231",
+        "distance": 9
+      },
+      {
+        "name": "H2227",
+        "distance": 16
+      }
+    ]
+  },
+  "H2232": {
+    "x": 50,
+    "y": 208,
+    "connections": [
+      {
+        "name": "C21",
+        "distance": 18
+      },
+      {
+        "name": "C20",
+        "distance": 12
+      },
+      {
+        "name": "2232",
+        "distance": 2
+      }
+    ]
+  },
+  "H2237": {
+    "x": 94,
+    "y": 208,
+    "connections": [
+      {
+        "name": "C24",
+        "distance": 1
+      },
+      {
+        "name": "2237",
+        "distance": 2
+      },
+      {
+        "name": "H2234",
+        "distance": 15
+      }
+    ]
+  },
+  "H2231": {
+    "x": 29,
+    "y": 208,
+    "connections": [
+      {
+        "name": "C20",
+        "distance": 9
+      },
+      {
+        "name": "2231",
+        "distance": 2
+      }
+    ]
+  },
+  "H2206": {
+    "x": 84,
+    "y": 186,
+    "connections": [
+      {
+        "name": "C23",
+        "distance": 11
+      },
+      {
+        "name": "C22",
+        "distance": 16
+      }
+    ]
+  },
+  "H2202": {
+    "x": 63,
+    "y": 186,
+    "connections": [
+      {
+        "name": "C22",
+        "distance": 5
+      },
+      {
+        "name": "H2226",
+        "distance": 10
+      }
+    ]
+  },
+  "C21": {
+    "x": 68,
+    "y": 208,
+    "connections": [
+      {
+        "name": "C22",
+        "distance": 22
+      },
+      {
+        "name": "H2234",
+        "distance": 11
+      },
+      {
+        "name": "H2232",
+        "distance": 18
+      }
+    ]
+  },
+  "C22": {
+    "x": 68,
+    "y": 186,
+    "connections": [
+      {
+        "name": "C21",
+        "distance": 22
+      },
+      {
+        "name": "H2206",
+        "distance": 16
+      },
+      {
+        "name": "H2202",
+        "distance": 5
+      }
+    ]
+  },
+  "H2222": {
+    "x": 38,
+    "y": 173,
+    "connections": [
+      {
+        "name": "2222",
+        "distance": 2
+      },
+      {
+        "name": "C26",
+        "distance": 9
+      },
+      {
+        "name": "H2223",
+        "distance": 6
+      }
+    ]
+  },
+  "C23": {
+    "x": 95,
+    "y": 186,
+    "connections": [
+      {
+        "name": "C24",
+        "distance": 22
+      },
+      {
+        "name": "EStairsTop2",
+        "distance": 9
+      },
+      {
+        "name": "H2206",
+        "distance": 11
+      }
+    ]
+  },
+  "C24": {
+    "x": 95,
+    "y": 208,
+    "connections": [
+      {
+        "name": "C23",
+        "distance": 22
+      },
+      {
+        "name": "H2237",
+        "distance": 1
+      },
+      {
+        "name": "EStairsTop",
+        "distance": 9
+      }
+    ]
+  },
+  "H2226": {
+    "x": 53,
+    "y": 186,
+    "connections": [
+      {
+        "name": "2226",
+        "distance": 3
+      },
+      {
+        "name": "H2202",
+        "distance": 10
+      },
+      {
+        "name": "C25",
+        "distance": 6
+      }
+    ]
+  },
+  "C25": {
+    "x": 47,
+    "y": 186,
+    "connections": [
+      {
+        "name": "H2226",
+        "distance": 6
+      },
+      {
+        "name": "C26",
+        "distance": 13
+      }
+    ]
+  },
+  "C26": {
+    "x": 47,
+    "y": 173,
+    "connections": [
+      {
+        "name": "C25",
+        "distance": 13
+      },
+      {
+        "name": "H2222",
+        "distance": 9
+      }
+    ]
+  }
+}
