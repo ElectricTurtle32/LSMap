@@ -14,7 +14,7 @@ class Graph {
         while (queue.length > 0) {
             // Sort by distance
             queue.sort((a, b) => a[0] - b[0]);
-            let currentNode = queue.pop();
+            let currentNode = queue.shift();
 
             if (!visited.includes(currentNode[1])) {
                 visited.push(currentNode[1]);
@@ -24,6 +24,7 @@ class Graph {
                 let connectedNodes = this.graph[currentNode[1]].connections;
 
                 for (let i = 0; i < connectedNodes.length; i++) {
+                   
                     queue.push([distance + connectedNodes[i].distance, connectedNodes[i].name, currentNode[1]]);
                 }
             }
@@ -39,8 +40,8 @@ class Graph {
         line(pos1.x, pos1.y, pos2.x, pos2.y);
     }
 
-    drawNode(node, zoom, center) {
-        let pos = this.#zoomPoint(center, createVector(this.graph[node].x, this.graph[node].y), zoom);
+    drawNode(node, center, camera) {
+        let pos = camera.zoomPoint(center, createVector(this.graph[node].x, this.graph[node].y));
 
         strokeWeight(2);
         fill('red');
