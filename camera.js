@@ -4,6 +4,11 @@ class Cam {
       this.angle = angle;
       this.zoom = zoom;
     }
+    translatePoint(pos){
+        let nx = pos.x + this.position.x;
+        let ny = pos.y + this.position.y;
+        return createVector(nx, ny);
+    }
     rotatePoint(center, pos) {
         let cx = center.x;
         let cy = center.y;

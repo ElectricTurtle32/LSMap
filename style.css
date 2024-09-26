@@ -30,11 +30,13 @@ canvas {
   
 }
 #searchList{
+ 
   list-style-type: none;
   font-size: 18px;
   flex-grow: 1;
   padding: 0;
   margin-top: 15px;
+  display: none;
   
   
 }
@@ -44,7 +46,7 @@ canvas {
 
   width: 25%;
   height: auto;
-  margin: auto;
+  margin-left: 10px;
   padding: auto;
   margin-top: 10px;
   background-color: white;
@@ -56,26 +58,30 @@ canvas {
 }
 
 #searchBar{
-  
+  height: auto;
   width: 25%;
-  height: 40px;
-  margin: auto;
+  
+  margin-left: 10px;
   padding: auto;
   margin-top: 10px;
   background-color: white;
   box-shadow: 0px 2px 4px lightslategray; 
-  border-radius: 40px;
-  
+  border-radius: 30px;
   display: flex;
+  flex-direction: column;
+
+ 
+
 
 
 
   
 }
 #searchList li {
+  padding: 10px;
   padding-left: 15px;
 }
 
-#searchDiv #searchList li:hover {
+#searchBar #searchList li:hover {
   background-color: #eee !important; /* Use !important to override other styles */
 }
