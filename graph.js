@@ -33,18 +33,16 @@ class Graph {
         return this.#solvePath(startNode, endNode, source);
     }
 
-    drawLine(node1, node2, center, camera) {
+    drawLine(node1, node2, zoom, center) {
         stroke(0);
-        let pos1 = camera.zoomPoint(center, createVector(this.graph[node1].x, this.graph[node1].y));
-        let pos2 = camera.zoomPoint(center, createVector(this.graph[node2].x, this.graph[node2].y));
-        pos1 = camera.translatePoint(pos1);
-        pos2 = camera.translatePoint(pos2);
+        let pos1 = this.#zoomPoint(center, createVector(this.graph[node1].x, this.graph[node1].y), zoom);
+        let pos2 = this.#zoomPoint(center, createVector(this.graph[node2].x, this.graph[node2].y), zoom);
         line(pos1.x, pos1.y, pos2.x, pos2.y);
     }
 
     drawNode(node, center, camera) {
         let pos = camera.zoomPoint(center, createVector(this.graph[node].x, this.graph[node].y));
-        pos = camera.translatePoint(pos);
+
         strokeWeight(2);
         fill('red');
         noStroke();

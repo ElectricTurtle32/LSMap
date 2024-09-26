@@ -25,7 +25,7 @@ function setup() {
   
   canvas.parent('sketch-container');
   graph = new Graph(jsonmap);
-  camera = new Cam(createVector(100, 100), 0, 1);
+  camera = new Cam(center, 0, 1);
   voice = new p5.Speech();
   voice.onLoad = voiceReady;
   voices = voice.voices
@@ -46,16 +46,17 @@ function draw() {
 // })
   background(255);
 
-//Drawing Paths
+
 if (start != null){
   let path = graph.solve(start, '2222');
   center = createVector(jsonmap[start].x,jsonmap[start].y);
   for (let i = 0; i < path.length-1; i++){
 
-    graph.drawLine(path[i].toString(), path[i+1].toString(), center, camera);
+    graph.drawLine(path[i].toString(), path[i+1].toString(), zoom, center);
   }
-
-//Drawing Nodes
+  // for (let i = 1; i < Object.keys(jsonmap).length; i++){
+  //   graph.drawNode(Object.keys(jsonmap)[i].toString(), zoom, center);
+  // }
   for (let i = 0; i < path.length; i++){
     graph.drawNode(path[i].toString(), center, camera);
   }
@@ -72,10 +73,14 @@ function mouseClicked(){
   voice.speak('turn left here.')
   
 }
-function mouseWheel(event) {
+function mouseWheel(event) { 
+  
+  
+
+  
   camera.zoom += event.delta/10; 
-  //zoom += event.delta/10; 
-  //zoom = constrain(zoom, 1, 300);
+  zoom += event.delta/10; 
+  zoom = constrain(zoom, 1, 300);
   
 
 } window.onerror = function(msg, url, linenumber) {
@@ -85,6 +90,7 @@ function mouseWheel(event) {
 
 function updateList(){
   let list = document.getElementById("searchList");
+  let div = document.getElementById("searchDiv");;
   let query = document.getElementById("search").value;
   query = query.trim();
   let arr = roomNames.filter((el) => el.toString().includes(query.toLowerCase()));
@@ -93,9 +99,7 @@ function updateList(){
   
   // Loop through the array and create list items
   if (query != ''){
-    
-    document.getElementById("searchBar").style.borderRadius = '15px'
-    document.getElementById("searchList").style.display = 'block';
+    document.getElementById("searchDiv").style.display = 'flex';
     if (arr.length == 0){
       const li = document.createElement('li');
       li.textContent = "Add a missing place";
@@ -112,7 +116,6 @@ function updateList(){
   });
 }
 } else {
-  document.getElementById("searchList").style.display = 'none';
-  document.getElementById("searchBar").style.borderRadius = '30px';
+  document.getElementById("searchDiv").style.display = 'none';
 }
 }
