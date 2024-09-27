@@ -25,7 +25,7 @@ function setup() {
   
   canvas.parent('sketch-container');
   graph = new Graph(jsonmap);
-  camera = new Cam(center, 0, 1);
+  camera = new Cam(createVector(500, 500), 0, 1);
   voice = new p5.Speech();
   voice.onLoad = voiceReady;
   voices = voice.voices
@@ -52,7 +52,7 @@ if (start != null){
   center = createVector(jsonmap[start].x,jsonmap[start].y);
   for (let i = 0; i < path.length-1; i++){
 
-    graph.drawLine(path[i].toString(), path[i+1].toString(), zoom, center);
+    graph.drawLine(path[i].toString(), path[i+1].toString(), center, camera);
   }
   // for (let i = 1; i < Object.keys(jsonmap).length; i++){
   //   graph.drawNode(Object.keys(jsonmap)[i].toString(), zoom, center);
