@@ -25,7 +25,7 @@ function setup() {
   
   canvas.parent('sketch-container');
   graph = new Graph(jsonmap);
-  camera = new Cam(createVector(500, 500), 0, 1);
+  camera = new Cam(createVector(100, 100), 0, 1);
   voice = new p5.Speech();
   voice.onLoad = voiceReady;
   voices = voice.voices
