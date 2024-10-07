@@ -33,7 +33,7 @@
 
   <body>
     
-    <md-circular-progress indeterminate></md-circular-progress>
+    
     
     <script src="sketch.js"></script>
     <script src="camera.js"></script>
@@ -41,15 +41,19 @@
     
     <div id="sketch-container"></div>
     <div id="searchDiv">
-      <md-filled-text-field id="search" oninput="updateList()">
+      <md-filled-text-field id="search" oninput="updateList()" maxlength="10">
+       
       </md-filled-text-field>
-      <ul id="searchList">
+      <md-icon-button>
+        <span class="material-icons">swap_vert</span>
+      </md-icon-button>
 
-      </ul>
+      <md-list id="searchList"></md-list>
+ 
+
+      
     </div>
 
-    <md-icon-button>
-      <span class="material-icons">swap_vert</span>
-    </md-icon-button>
+    
   </body>
 </html>
