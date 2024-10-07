@@ -31,6 +31,7 @@ canvas {
   
 }
 #searchList{
+  
   list-style-type: none;
   font-size: 18px;
   flex-grow: 1;
@@ -53,26 +54,11 @@ canvas {
   border-radius: 15px;
   
   
-  display: none;
-}
-
-#searchBar{
-  
-  width: 25%;
-  height: 40px;
-  margin: auto;
-  padding: auto;
-  margin-top: 10px;
-  background-color: white;
-  box-shadow: 0px 2px 4px lightslategray; 
-  border-radius: 40px;
-  
   display: flex;
-
-
-
-  
+  flex-direction: column;
 }
+
+
 #searchList li {
   padding-left: 15px;
 }

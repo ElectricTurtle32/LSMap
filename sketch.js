@@ -58,8 +58,10 @@ if (start != null){
   //   graph.drawNode(Object.keys(jsonmap)[i].toString(), zoom, center);
   // }
   for (let i = 0; i < path.length; i++){
+    if (path[i] > 0){
     graph.drawNode(path[i].toString(), center, camera);
   }
+}
 }
 
 }
@@ -99,7 +101,7 @@ function updateList(){
   
   // Loop through the array and create list items
   if (query != ''){
-    document.getElementById("searchDiv").style.display = 'flex';
+   
     if (arr.length == 0){
       const li = document.createElement('li');
       li.textContent = "Add a missing place";
@@ -115,7 +117,5 @@ function updateList(){
       list.appendChild(li);
   });
 }
-} else {
-  document.getElementById("searchDiv").style.display = 'none';
-}
+} 
 }
